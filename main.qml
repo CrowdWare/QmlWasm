@@ -10,7 +10,7 @@ Window {
 
     Text {
         anchors.centerIn: parent
-        text: qsTr("Hello wasm from QML")
+        text: qsTr("Hello wasm from QML...")
         color: "white"
     }
 }
