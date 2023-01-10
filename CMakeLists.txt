@@ -30,4 +30,5 @@ target_link_libraries(appqmlwasm
 
 install(TARGETS appqmlwasm
     BUNDLE DESTINATION .
-    LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR})
+    LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
+)
