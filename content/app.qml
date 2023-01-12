@@ -13,5 +13,5 @@ Item {
         color: "white"
     }
 
-    Component.onCompleted: seo.setDescription("This is the description from app.qml")
+    Component.onCompleted: console.log("Completed Running!")
 }
