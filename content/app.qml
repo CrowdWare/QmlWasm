@@ -9,9 +9,12 @@ Item {
 
     Text {
         anchors.centerIn: parent
-        text: "This qml has been loaded dynamically from a web server."
+        text: "This qml has been loaded dynamically from a web server and is able to set meta keywords."
         color: "white"
     }
 
-    Component.onCompleted: seo.setDescription("This description is from app.qml")
+    Component.onCompleted: {
+        seo.setDescription("This description is from app.qml")
+        seo.setKeywords("test,qml,wasm")
+    }
 }
