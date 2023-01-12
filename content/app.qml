@@ -10,7 +10,7 @@ Window {
 
     Text {
         anchors.centerIn: parent
-        text: qsTr("This new qml has been loaded dynamically from a web server.")
+        text: qsTr("This brand new qml has been loaded dynamically from a web server.")
         color: "white"
     }
 }
