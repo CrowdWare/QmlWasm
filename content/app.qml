@@ -5,7 +5,7 @@ Window {
     visible: true
     width: 640
     height: 480
-    title: qsTr("Dynamic QML")
+    title: qsTr("Dynamic QML loaded")
     color: "#171C2C"
 
     Text {
