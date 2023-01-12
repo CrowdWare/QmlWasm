@@ -9,6 +9,8 @@ find_package(Qt6 6.2 COMPONENTS Quick REQUIRED)
 
 qt_add_executable(appqmlwasm
     main.cpp
+    seo.cpp
+    seo.h
 )
 
 qt_add_qml_module(appqmlwasm

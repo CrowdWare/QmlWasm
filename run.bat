@@ -1,0 +1,2 @@
+C:\Qt\Tools\CMake_64\bin\cmake.exe --build E:/SourceCode/build-qmlwasm-Desktop_Qt_6_4_2_MinGW_64_bit-Release --target all
+E:/SourceCode/build-qmlwasm-Desktop_Qt_6_4_2_MinGW_64_bit-Release/appqmlwasm.exe
