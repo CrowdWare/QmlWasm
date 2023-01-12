@@ -16,5 +16,6 @@ Item {
     Component.onCompleted: {
         seo.setDescription("This description is from app.qml")
         seo.setKeywords("test,qml,wasm")
+        seo.replaceState("app")
     }
 }
