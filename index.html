@@ -12,7 +12,7 @@
     <meta name="keywords" content="QML, WASM, C++" />
     <meta name="robots" content="index, follow" />
     <meta name="google-site-verification" content="ag5d0o0QkNRrBTGvjOpakX2NM943hpggL8hlgvQilpw" />
-    <title>Dynamic QML - Testpage</title>
+    <title>Dynamic QML</title>
     <style>
       /* Make the html body cover the entire (visual) viewport with no scroll bars. */
       html, body { padding: 0; margin: 0; overflow:hidden; height: 100% }
@@ -32,41 +32,41 @@
     <canvas id="qtcanvas"></canvas>
 
     <script type='text/javascript'>
-        let qtLoader = undefined;
-        function init() {
-          var spinner = document.querySelector('#qtspinner');
-          var canvas = document.querySelector('#qtcanvas');
-          var status = document.querySelector('#qtstatus')
+      let qtLoader = undefined;
+      function init() {
+        var spinner = document.querySelector('#qtspinner');
+        var canvas = document.querySelector('#qtcanvas');
+        var status = document.querySelector('#qtstatus')
 
-          qtLoader = QtLoader({
-              canvasElements : [canvas],
-              showLoader: function(loaderStatus) {
-                  spinner.style.display = 'block';
-                  canvas.style.display = 'none';
-                  status.innerHTML = loaderStatus + "...";
-              },
-              showError: function(errorText) {
-                  status.innerHTML = errorText;
-                  spinner.style.display = 'block';
-                  canvas.style.display = 'none';
-              },
-              showExit: function() {
-                  status.innerHTML = "Application exit";
-                  if (qtLoader.exitCode !== undefined)
-                      status.innerHTML += " with code " + qtLoader.exitCode;
-                  if (qtLoader.exitText !== undefined)
-                      status.innerHTML += " (" + qtLoader.exitText + ")";
-                  spinner.style.display = 'block';
-                  canvas.style.display = 'none';
-              },
-              showCanvas: function() {
-                  spinner.style.display = 'none';
-                  canvas.style.display = 'block';
-              },
-          });
-          qtLoader.loadEmscriptenModule("appqmlwasm");
-      }
-    </script>
+        qtLoader = QtLoader({
+            canvasElements : [canvas],
+            showLoader: function(loaderStatus) {
+                spinner.style.display = 'block';
+                canvas.style.display = 'none';
+                status.innerHTML = loaderStatus + "...";
+            },
+            showError: function(errorText) {
+                status.innerHTML = errorText;
+                spinner.style.display = 'block';
+                canvas.style.display = 'none';
+            },
+            showExit: function() {
+                status.innerHTML = "Application exit";
+                if (qtLoader.exitCode !== undefined)
+                    status.innerHTML += " with code " + qtLoader.exitCode;
+                if (qtLoader.exitText !== undefined)
+                    status.innerHTML += " (" + qtLoader.exitText + ")";
+                spinner.style.display = 'block';
+                canvas.style.display = 'none';
+            },
+            showCanvas: function() {
+                spinner.style.display = 'none';
+                canvas.style.display = 'block';
+            },
+        });
+        qtLoader.loadEmscriptenModule("appqmlwasm");
+    }
+  </script>
     <script type="text/javascript" src="qtloader.js"></script>
   </body>
 </html>
