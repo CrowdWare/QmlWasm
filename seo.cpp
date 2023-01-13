@@ -19,3 +19,15 @@ void Seo::setKeywords(QString keys)
     emscripten_run_script(cmd.toUtf8().data());
 }
 
+void Seo::setUrl(QString url)
+{
+    QString cmd = "window.history.replaceState({}, \"\", \"#" + url + "\");";
+    emscripten_run_script(cmd.toUtf8().data());
+}
+
+void Seo::setTitle(QString title)
+{
+    QString cmd = "document.title = \"" + title + "\";";
+    emscripten_run_script(cmd.toUtf8().data());
+}
+
