@@ -5,15 +5,24 @@ import QtQuick.Layouts 1.3
 
 Window {
     visible: true
-    width: 640
-    height: 480
     color: "#171C2C"
     title: "Dynamic QML"
 
     StackView {
         id: stackview
-        initialItem: "https://raw.githubusercontent.com/CrowdWare/QmlWasm/web/content/app.qml"
+        initialItem: text
         anchors.centerIn: parent
+    }
 
+    Text {
+        id: text
+        anchors.centerIn: parent
+        color: "white"
+        text: "Hello world"
+    }
+
+    function loadPage(url: string)
+    {
+        stackview.replace(url)
     }
 }
