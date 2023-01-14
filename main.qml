@@ -1,7 +1,8 @@
-import QtQuick 2.13
-import QtQuick.Window 2.13
-import QtQuick.Controls 2.13
-import QtQuick.Layouts 1.3
+import QtQuick
+import QtQuick.Window
+import QtQuick.Controls
+import QtQuick.Layouts
+import QtQuick.Controls.Material
 
 Window {
     visible: true
@@ -12,6 +13,23 @@ Window {
         id: stackview
         initialItem: text
         anchors.centerIn: parent
+
+        replaceEnter: Transition {
+            PropertyAnimation {
+                property: "opacity"
+                from: 0
+                to:1
+                duration: 400
+            }
+        }
+        replaceExit: Transition {
+            PropertyAnimation {
+                property: "opacity"
+                from: 1
+                to:0
+                duration: 400
+            }
+        }
     }
 
     Text {
@@ -23,6 +41,9 @@ Window {
 
     function loadPage(url: string)
     {
-        stackview.replace(url)
+        if(url === "")
+            stackview.replace(text, StackView.ReplaceTransition)
+        else
+            stackview.replace(url, StackView.ReplaceTransition)
     }
 }
