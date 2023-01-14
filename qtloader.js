@@ -413,6 +413,8 @@ function QtLoader(config)
 
         self.qtContainerElements = config.canvasElements;
 
+        self.moduleConfig['arguments'] = [document.location.hash];
+
         config.restart = function() {
 
             // Restart by reloading the page. This will wipe all state which means

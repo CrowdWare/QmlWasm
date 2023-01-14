@@ -30,7 +30,6 @@
       </center>
     </figure>
     <canvas id="qtcanvas"></canvas>
-
     <script type='text/javascript'>
       let qtLoader = undefined;
       function init() {
@@ -68,8 +67,11 @@
     }
 
     window.addEventListener('hashchange', () => {
-      var ptr  = qtLoader.module().allocate(qtLoader.module().intArrayFromString(window.location.hash), 'i8', 0);
-      qtLoader.module()._hashchanged(ptr + 1);
+        var ptr  = qtLoader.module().allocate(qtLoader.module().intArrayFromString(window.location.hash), 'i8', 0);
+        if(window.location.hash.length > 0)
+          qtLoader.module()._hashchanged(ptr + 1);
+        else
+          qtLoader.module()._hashchanged(ptr);
     }, false);
     </script>
     <script type="text/javascript" src="qtloader.js"></script>
