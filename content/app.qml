@@ -10,9 +10,13 @@ Item {
     Text {
         anchors.centerIn: parent
         textFormat: Text.RichText
-        text: "Bla. This qml has been loaded dynamically from a web server and is able to set meta keywords. We area also working on <a href=\"https://www.crowdware.at\">hyperlinks</a>"
+        text: "This qml has been loaded dynamically from a web server and is able to set meta keywords. We area also working on <a href=\"https://www.crowdware.at\">hyperlinks</a>"
         color: "white"
-        onLinkActivated: (link, seo)=> seo.runJavaScript("window.location.href = \"" + link + "\"")
+        onLinkActivated: (link)=> {
+            console.log(link)
+            console.log(seo)
+            seo.runJavaScript("window.location.href = \"" + link + "\"")
+        }
     }
 
     Component.onCompleted: {
