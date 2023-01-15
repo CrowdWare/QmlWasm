@@ -2,6 +2,8 @@ import QtQuick 2.13
 import at.crowdware.wasm 1.0
 
 Item {
+    id: item
+    signal loadPage(string page)
 
     Seo {
         id: seo
@@ -10,9 +12,14 @@ Item {
     Text {
         anchors.centerIn: parent
         textFormat: Text.RichText
-        text: "<style>a:link{color:green}</style>This qml has been loaded dynamically from a web server and is able to set meta keywords. We area also working on <a href=\"https://www.crowdware.at\">hyperlinks</a>."
-        color: "white"
-        onLinkActivated: (link)=> seo.runScript("window.location.href = \"" + link + "\"")
+        text: "<style>a:link{color:green}</style>This qml has been loaded dynamically from a web server and is able to set meta keywords.<br>We area also working on external <a href=\"https://www.crowdware.at\">links</a> and local <a href=\"test\">links</a>."
+        color: "white
+        onLinkActivated: (link)=> {
+            if(link.startsWith("http"))
+                seo.runScript("window.location.href = \"" + link + "\"")
+            else
+                item.loadPage(link)
+        }
     }
 
     Component.onCompleted: {
