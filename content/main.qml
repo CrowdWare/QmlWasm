@@ -13,7 +13,7 @@ Item {
         textFormat: Text.RichText
         text: "<style>a:link{color:green}</style>Hello world. Navgate to the next <a href=\"app\">page</a>."
         color: "white"
-        onLinkActivated: (link)=> item.parent.LoadPage(link)
+        onLinkActivated: (link)=> item.parent.loadPage(link)
     }
 
     Component.onCompleted: {
