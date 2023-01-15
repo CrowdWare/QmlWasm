@@ -3,6 +3,8 @@ import at.crowdware.wasm 1.0
 
 Item {
     id: item
+    signal loadPage(string page)
+    
     Seo {
         id: seo
     }
@@ -12,10 +14,7 @@ Item {
         color: "white"
         textFormat: Text.RichText
         text: "<style>a:link{color:green}</style>Hello world!.<br>Navigate to the next <a href=\"app\">page</a>."
-        onLinkActivated: (link)=> {
-            var mainWindow = Qt.findObject("mainWindow")
-            mainWindow.loadPage(link)
-        }
+        onLinkActivated: (link)=> item.loadPage(link)
     }
 
     Component.onCompleted: {
