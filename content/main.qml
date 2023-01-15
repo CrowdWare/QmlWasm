@@ -11,7 +11,7 @@ Item {
         anchors.centerIn: parent
         color: "white"
         textFormat: Text.RichText
-        text: "<style>a:link{color:green}</style>Hello world. Navigate to the next <a href=\"app\">page</a>."
+        text: "<style>a:link{color:green}</style>Hello world. \nNavigate to the next <a href=\"app\">page</a>."
         onLinkActivated: (link)=> item.parent.loadPage(link)
     }
 
