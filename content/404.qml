@@ -8,7 +8,7 @@ Item {
 
     Text {
         anchors.centerIn: parent
-        text: "The requested page could not be found"
+        text: "404 - The requested page could not be found"
         color: "orange"
     }
 
