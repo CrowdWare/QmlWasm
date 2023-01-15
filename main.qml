@@ -6,6 +6,7 @@ import QtQuick.Controls.Material
 import at.crowdware.wasm 1.0
 
 Window {
+    id: mainWindow
     visible: true
     color: "#171C2C"
 
@@ -32,6 +33,18 @@ Window {
             from: 0
             to: 1
             duration: 500
+        }
+    }
+
+    Connections
+    {
+        id: conn
+        target: null
+        ignoreUnknownSignals: true
+        function onLoadPage(page)
+        {
+            mainWindow.loadPage(page)
+            seo.runScript("window.location = \"#" + page + "\"")
         }
     }
 
@@ -89,5 +102,6 @@ Window {
         fadeIn.start()
         if(fadeOut.target != null)
             fadeOut.target.destroy()
+        conn.target = fadeIn.target
     }
 }
