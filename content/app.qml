@@ -12,8 +12,7 @@ Item {
         textFormat: Text.RichText
         text: "This qml has been loaded dynamically from a web server and is able to set meta keywords. We area also working on <a href=\"https://www.crowdware.at\">hyperlinks</a>"
         color: "white"
-        onLinkActivated: console.log(link + " link activated")
-        onLinkHovered: console.log(link + " link hovered")
+        onLinkActivated: seo.runScript("window.location.href = \"" + link + "\"")
     }
 
     Component.onCompleted: {
