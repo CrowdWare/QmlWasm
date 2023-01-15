@@ -12,6 +12,7 @@ Item {
         textFormat: Text.RichText
         text: "This qml has been loaded dynamically from a <a href=\"https://www.crowdware.at\">web server</a> and is able to set meta keywords."
         color: "white"
+        onLinkActivated: console.log(link + " link activated")
     }
 
     Component.onCompleted: {
