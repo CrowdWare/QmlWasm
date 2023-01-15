@@ -1,15 +1,18 @@
 import QtQuick 2.13
 import at.crowdware.wasm 1.0
 
-Item {
+Item 
+{
     id: item
     signal loadPage(string page)
     
-    Seo {
+    Seo 
+    {
         id: seo
     }
 
-    Text {
+    Text 
+    {
         anchors.centerIn: parent
         color: "white"
         textFormat: Text.RichText
@@ -17,7 +20,8 @@ Item {
         onLinkActivated: (link)=> item.loadPage(link)
     }
 
-    Component.onCompleted: {
+    Component.onCompleted: 
+    {
         seo.setDescription("This content was rendered in using C++,QML and WASM")
         seo.setKeywords("QML, WASM, C++")
         seo.setTitle("Dynamic QML - Main")
