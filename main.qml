@@ -55,7 +55,11 @@ Window {
         }
         else if (component.status === Component.Error)
         {
-            loadPage("404")
+            var error = component.errorString()
+            if(error.includes("File not found"))
+                loadPage("404")
+            else
+                console.log("Error loading component:", error);
         }
         else
             component.statusChanged.connect(finishCreation);
@@ -70,7 +74,11 @@ Window {
         }
         else if (component.status === Component.Error)
         {
-            loadPage("404")
+            var error = component.errorString()
+            if(error.includes("File not found"))
+                loadPage("404")
+            else
+                console.log("Error loading component:", error);
         }
     }
 
