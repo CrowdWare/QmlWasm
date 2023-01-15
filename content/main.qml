@@ -12,7 +12,10 @@ Item {
         color: "white"
         textFormat: Text.RichText
         text: "<style>a:link{color:green}</style>Hello world!.<br>Navigate to the next <a href=\"app\">page</a>."
-        onLinkActivated: (link)=> item.parent.parent.loadPage(link)
+        onLinkActivated: (link)=> {
+            var mainWindow = Qt.findObject("mainWindow")
+            mainWindow.loadPage(link)
+        }
     }
 
     Component.onCompleted: {
