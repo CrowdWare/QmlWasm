@@ -12,7 +12,7 @@ Item {
     Text {
         anchors.centerIn: parent
         textFormat: Text.RichText
-        text: "<style>a:link{color:green}</style>This qml has been loaded dynamically from a web server and is able to set meta keywords.<br>We area also working on external <a href=\"https://www.crowdware.at\">links</a> and local <a href=\"test\">links</a>."
+        text: "<style>a:link{color:green}</style>This qml has been loaded dynamically from a web server and is able to set meta keywords and meta description.<br>We area also working on external <a href=\"https://www.crowdware.at\">links</a> and local <a href=\"test\">links</a>."
         color: "white
         onLinkActivated: (link)=> 
         {
