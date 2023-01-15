@@ -413,7 +413,7 @@ function QtLoader(config)
 
         self.qtContainerElements = config.canvasElements;
 
-        self.moduleConfig['arguments'] = [document.location.hash];
+        self.moduleConfig['arguments'] = ["https://raw.githubusercontent.com/CrowdWare/QmlWasm/web/content/",document.location.hash];
 
         config.restart = function() {
 
