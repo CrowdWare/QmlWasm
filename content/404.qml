@@ -9,7 +9,7 @@ Item {
     Text {
         anchors.centerIn: parent
         text: "The requested page could not be found"
-        color: "red"
+        color: "orange"
     }
 
     Component.onCompleted: {
