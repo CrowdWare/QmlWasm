@@ -16,7 +16,7 @@ Item {
         color: "white
         onLinkActivated: (link)=> 
         {
-            if(link.includes("http"))
+            if(link.startsWith("http"))
                 seo.runScript("window.location.href = \"" + link + "\"")
             else
                 item.loadPage(link)
