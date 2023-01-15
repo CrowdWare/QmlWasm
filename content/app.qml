@@ -19,5 +19,6 @@ Item {
         seo.setDescription("This description is from app.qml")
         seo.setKeywords("test,qml,wasm")
         seo.setTitle("Dynamic QML - App")
+        seo.runJavaScript("alert(\"Hi\")")
     }
 }
