@@ -9,7 +9,8 @@ Item {
 
     Text {
         anchors.centerIn: parent
-        text: "This qml has been loaded dynamically from a web server and is able to set meta keywords."
+        textFormat: Text.RichText
+        text: "This qml has been loaded dynamically from a <a href="https://www.crowdware.at">web server</a> and is able to set meta keywords."
         color: "white"
     }
 
