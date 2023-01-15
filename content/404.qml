@@ -1,18 +1,22 @@
 import QtQuick 2.13
 import at.crowdware.wasm 1.0
 
-Item {
-    Seo {
+Item 
+{
+    Seo 
+    {
         id: seo
     }
 
-    Text {
+    Text
+    {
         anchors.centerIn: parent
         text: "404 - The requested page could not be found"
         color: "orange"
     }
 
-    Component.onCompleted: {
+    Component.onCompleted: 
+    {
         seo.setTitle("Dynamic QML - Page Not Found")
     }
 }
