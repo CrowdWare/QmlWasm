@@ -13,7 +13,7 @@ Item {
         anchors.centerIn: parent
         textFormat: Text.RichText
         text: "<style>a:link{color:green}</style>This qml has been loaded dynamically from a web server and is able to set meta keywords.<br>We area also working on external <a href=\"https://www.crowdware.at\">links</a> and local <a href=\"test\">links</a>."
-        color: "white
+        color: "white"
         onLinkActivated: (link)=> 
         {
             if(link.startsWith("http"))
