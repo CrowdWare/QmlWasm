@@ -2,15 +2,18 @@ import QtQuick 2.13
 import at.crowdware.wasm 1.0
 
 Item {
-
+    id: item
     Seo {
         id: seo
     }
 
     Text {
         anchors.centerIn: parent
-        text: "Hello world."
         color: "white"
+        textFormat: Text.RichText
+        text: "<style>a:link{color:green}</style>Hello world. Navgate to the next <a href=\"app\">page</a>."
+        color: "white"
+        onLinkActivated: (link)=> item.parent.LoadPage(link)
     }
 
     Component.onCompleted: {
