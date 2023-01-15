@@ -13,8 +13,6 @@ Item {
     }
 
     Component.onCompleted: {
-        seo.setDescription("This content was rendered in using C++,QML and WASM")
-        seo.setKeywords("QML, WASM, C++")
         seo.setTitle("Dynamic QML - Page Not Found")
     }
 }
