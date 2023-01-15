@@ -10,7 +10,7 @@ Item {
     Text {
         anchors.centerIn: parent
         textFormat: Text.RichText
-        text: "BLA. This qml has been loaded dynamically from a web server and is able to set meta keywords. We area also working on <a href=\"https://www.crowdware.at\">hyperlinks</a>"
+        text: "This qml has been loaded dynamically from a web server and is able to set meta keywords. We area also working on <a href=\"https://www.crowdware.at\">hyperlinks</a>"
         color: "white"
         onLinkActivated: (link)=> seo.runJavaScript("window.location.href = \"" + link + "\"")
     }
@@ -19,6 +19,5 @@ Item {
         seo.setDescription("This description is from app.qml")
         seo.setKeywords("test,qml,wasm")
         seo.setTitle("Dynamic QML - App")
-        seo.runJavaScript("alert(\"Hi\")")
     }
 }
