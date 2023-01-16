@@ -19,6 +19,30 @@ Item
         text: "<style>a:link{color:green}</style>Hello world!.<br>Navigate to the next <a href=\"app\">page</a>."
         onLinkActivated: (link)=> item.loadPage(link)
     }
+    
+    Button 
+    {
+        id: enter
+        text: "Enter Fullscreen"
+        onClicked: {
+            seo.runScript("document.requestFullscreen()")
+            enter.visible = false
+            exit.visible = true
+        }
+    }
+    
+    Button 
+    {
+        id: exit
+        visible: false
+        text: "Exit Fullscreen"
+        onClicked:
+        {
+            seo.runScript("document.exitFullscreen()")
+            exit.visible = false
+            enter.visible = true   
+        }
+    }
 
     Component.onCompleted: 
     {
