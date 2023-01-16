@@ -5,6 +5,7 @@ import at.crowdware.wasm 1.0
 Item 
 {
     id: item
+    color: "#C0C0C0"
     signal loadPage(string page)
     
     Seo 
