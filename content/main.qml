@@ -25,8 +25,12 @@ Item
     {
         id: enter
         text: "Enter Fullscreen"
+        anchors.right: parent.right
+        anchors.bottom: parent.bottom
+        anchors.bottomMargin: 8
+        anchors.rightMargin: 8
         onClicked: {
-            seo.runScript("document.requestFullscreen()")
+            seo.runScript("document.documentElement.requestFullscreen()")
             enter.visible = false
             exit.visible = true
         }
@@ -36,10 +40,14 @@ Item
     {
         id: exit
         visible: false
+        anchors.right: parent.right
+        anchors.bottom: parent.bottom
+        anchors.bottomMargin: 8
+        anchors.rightMargin: 8
         text: "Exit Fullscreen"
         onClicked:
         {
-            seo.runScript("document.exitFullscreen()")
+            seo.runScript("document.documentElement.exitFullscreen()")
             exit.visible = false
             enter.visible = true   
         }
