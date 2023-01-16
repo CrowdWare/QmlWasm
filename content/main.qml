@@ -5,7 +5,6 @@ import at.crowdware.wasm 1.0
 Item 
 {
     id: item
-    color: "#C0C0C0"
     anchors.fill: parent
 
     signal loadPage(string page)
