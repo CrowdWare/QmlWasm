@@ -27,10 +27,10 @@ Item
     {
         id: enter
         text: "Enter Fullscreen"
-        anchors.left: parent.left
+        anchors.right: parent.right
         anchors.bottom: parent.bottom
         anchors.bottomMargin: 8
-        anchors.leftMargin: 8
+        anchors.rightMargin: 8
         onClicked: 
         {
             seo.runScript("document.documentElement.requestFullscreen()")
