@@ -23,7 +23,6 @@ Item
     
     Button 
     {
-        
         id: enter
         text: "Enter Fullscreen"
         onClicked: {
