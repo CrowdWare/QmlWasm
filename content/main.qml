@@ -47,7 +47,7 @@ Item
         text: "Exit Fullscreen"
         onClicked:
         {
-            seo.runScript("document.documentElement.exitFullscreen()")
+            seo.runScript("document.exitFullscreen()")
             exit.visible = false
             enter.visible = true   
         }
