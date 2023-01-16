@@ -5,7 +5,7 @@ import at.crowdware.wasm 1.0
 Item 
 {
     id: item
-    anchors.fill: parent
+    //anchors.fill: parent
 
     signal loadPage(string page)
     
