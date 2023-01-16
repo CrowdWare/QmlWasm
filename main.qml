@@ -5,18 +5,23 @@ import QtQuick.Layouts
 import QtQuick.Controls.Material
 import at.crowdware.wasm 1.0
 
-Window {
+ApplicationWindow
+{
     id: mainWindow
     visible: true
-    color: "#171C2C"
+    Material.theme: Material.Dark
+    Material.primary: Material.Indigo
+    Material.accent: Material.Pink
 
-    Seo {
+    Seo
+    {
         id: seo
     }
 
-    StackView {
+    StackView
+    {
         id: stackview
-        anchors.centerIn: parent
+        anchors.fill: parent
 
         NumberAnimation
         {

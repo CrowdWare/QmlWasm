@@ -21,6 +21,7 @@
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
 #include <QQuickWindow>
+#include <QQuickStyle>
 #include <QDebug>
 #include "seo.h"
 
@@ -42,6 +43,8 @@ int main(int argc, char *argv[])
 {
     QGuiApplication application(argc, argv);
     QQmlApplicationEngine engine;
+    QQuickStyle::setStyle("Material");
+
     eng = &engine;
     app = &application;
 
