@@ -1,11 +1,13 @@
-import QtQuick
-import QtQuick.Controls
+import QtQuick 6.4
+import QtQuick.Controls 6.4
 import at.crowdware.wasm 1.0
 
 Item 
 {
     id: item
     color: "#C0C0C0"
+    anchors.fill: parent
+
     signal loadPage(string page)
     
     Seo 
