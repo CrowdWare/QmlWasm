@@ -19,7 +19,7 @@ Item
         anchors.centerIn: parent
         color: "white"
         textFormat: Text.RichText
-        text: "<style>a:link{color:green} a:hover{color:orange}</style>Oh, hello world!.<br>Navigate to the next <a href=\"app\">page</a> or just enter #app or #test at the end of the adresse bar of your browser."
+        text: "<style>a:link{color:green} a:hover{color:orange}</style>Hello world!.<br>Navigate to the next <a href=\"app\">page</a> or just enter #app or #test at the end of the adresse bar of your browser."
         onLinkActivated: (link)=> item.loadPage(link)
     }
     
