@@ -29,7 +29,8 @@ Item
         anchors.bottom: parent.bottom
         anchors.bottomMargin: 8
         anchors.rightMargin: 8
-        onClicked: {
+        onClicked: 
+        {
             seo.runScript("document.documentElement.requestFullscreen()")
             enter.visible = false
             exit.visible = true
