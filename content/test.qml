@@ -16,7 +16,6 @@ Item
         anchors.centerIn: parent
         textFormat: Text.RichText
         text: "<style>a:link{color:green}</style>This qml has been loaded dynamically from a web server.<br> Go back <a href=\"main\">home</a>."
-        color: "white"
         onLinkActivated: (link)=> item.loadPage(link)
     }
 
