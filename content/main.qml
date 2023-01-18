@@ -16,8 +16,10 @@ Item
     TextEdit
     {
         anchors.centerIn: parent
-        textFormat: Text.RichText
-        readonly: true
+        readOnly: true
+        background: Transparent
+        border.color: Transparent
+        textFormat: TextEdit.RichText
         text: "<style>a:link{color:green} a:hover{color:orange}</style>Hello world!<br>Navigate to the next <a href=\"app\">page</a> or just enter #app or #test at the end of the adresse bar of your browser."
         onLinkActivated: (link)=> item.loadPage(link)
     }
