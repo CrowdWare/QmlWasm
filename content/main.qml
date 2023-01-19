@@ -28,6 +28,13 @@ Item
         }
     }
     
+    Label
+    {
+        anchors.left: parent.left
+        anchors.top: parent.top
+        text: "Label <a href=\"app\">page</a>"
+    }
+    
     Button 
     {
         id: enter
