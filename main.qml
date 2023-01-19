@@ -9,9 +9,6 @@ ApplicationWindow
 {
     id: mainWindow
     visible: true
-    Material.theme: Material.Dark
-    Material.primary: Material.Indigo
-    Material.accent: Material.Pink
 
     Seo
     {
@@ -56,9 +53,19 @@ ApplicationWindow
     property var component;
     property var serverUrl;
 
-    function setServerUrl(url: string)
+    function setProperties(url: string, theme: string, foreground: string, background: string, primary: string, accent: string)
     {
         serverUrl = url;
+        if(theme !== "")
+            Material.theme =  parseInt(theme)
+        if(foreground !== "")
+            Material.foreground = foreground
+        if(background !== "")
+            Material.background = background
+        if(primary !== "")
+            Material.primary = primary
+        if(accent !== "")
+            Material.accent = accent
     }
 
     function loadPage(page: string)

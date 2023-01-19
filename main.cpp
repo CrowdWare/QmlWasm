@@ -58,10 +58,21 @@ int main(int argc, char *argv[])
         else
         {
             QStringList args = app->arguments();
-            QString url = args[args.count() - 2];
-            QString hash = args[args.count() - 1];
+            QString url = args[args.count() - 7];
+            QString hash = args[args.count() - 6];
+            QString theme = args[args.count() - 5];
+            QString foreground = args[args.count() - 4];
+            QString background = args[args.count() - 3];
+            QString primary = args[args.count() - 2];
+            QString accent = args[args.count() - 1];
             QObject *win = eng->rootObjects().constFirst();
-            QMetaObject::invokeMethod(win, "setServerUrl", Q_ARG(QString, url));
+            QMetaObject::invokeMethod(win, "setProperties",
+                                      Q_ARG(QString, url),
+                                      Q_ARG(QString, theme),
+                                      Q_ARG(QString, foreground),
+                                      Q_ARG(QString, background),
+                                      Q_ARG(QString, primary),
+                                      Q_ARG(QString, accent));
             if(hash.length() > 1)
                 hashchanged((char*)hash.mid(1).toUtf8().constData());
             else
