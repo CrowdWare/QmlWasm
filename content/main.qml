@@ -13,13 +13,18 @@ Item
         id: seo
     }
 
-    TextEdit
+    Text
     {
         anchors.centerIn: parent
-        readOnly: true
-        textFormat: TextEdit.RichText
         text: "Hello world!<br>Navigate to the next <a href=\"app\">page</a> or just enter #app or #test at the end of the adresse bar of your browser."
         onLinkActivated: (link)=> item.loadPage(link)
+        
+        MouseArea 
+        {
+            anchors.fill: parent
+            acceptedButtons: Qt.NoButton
+            cursorShape: parent.hoveredLink ? Qt.PointingHandCursor : Qt.ArrowCursor
+        }
     }
     
     Button 
