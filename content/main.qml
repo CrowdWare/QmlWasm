@@ -16,7 +16,7 @@ Item
     Text
     {
         anchors.centerIn: parent
-        color: white
+        color: "white"
         text: "Hello world!<br>Navigate to the next <a href=\"app\">page</a> or just enter #app or #test at the end of the adresse bar of your browser."
         onLinkActivated: (link)=> item.loadPage(link)
         
