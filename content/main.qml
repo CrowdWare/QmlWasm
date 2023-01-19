@@ -16,7 +16,7 @@ Item
     Label
     {
         anchors.centerIn: parent
-        text: "<b>Hello world!</a><br>Navigate to the next <a href=\"app\">page</a> or just enter #app or #test at the end of the adresse bar of your browser."
+        text: "<b>Hello world!</a><br>Navigate to the next <a href=\"app\">page</a> or just enter #app or #test at the end of the address bar of your browser."
         onLinkActivated: (link)=> item.loadPage(link)
         
         MouseArea 
