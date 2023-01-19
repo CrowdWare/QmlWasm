@@ -63,7 +63,13 @@
                 canvas.style.display = 'block';
             },
         });
-        qtLoader.loadEmscriptenModule("appqmlwasm", "https://raw.githubusercontent.com/CrowdWare/QmlWasm/web/content/");
+        contentUrl = "https://raw.githubusercontent.com/CrowdWare/QmlWasm/web/content/"
+        theme = "1"
+        foreground = ""
+        background = ""
+        primary = ""
+        accent = "#00FF00"
+        qtLoader.loadEmscriptenModule("appqmlwasm", contentUrl, theme, foreground, background, primary, accent);
     }
 
     window.addEventListener('hashchange', () => {
