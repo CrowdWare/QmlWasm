@@ -32,6 +32,8 @@ Item
     {
         anchors.left: parent.left
         anchors.top: parent.top
+        anchors.leftMargin: 8
+        anchors.topMargin: 8
         text: "Label <a href=\"app\">page</a>"
         onLinkActivated: (link)=> item.loadPage(link)
         MouseArea 
