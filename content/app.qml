@@ -1,4 +1,5 @@
 import QtQuick 2.13
+import QtQuick.Controls 6.4
 import at.crowdware.wasm 1.0
 
 Item 
