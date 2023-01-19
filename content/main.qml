@@ -13,29 +13,12 @@ Item
         id: seo
     }
 
-    Text
-    {
-        anchors.centerIn: parent
-        color: "white"
-        text: "Hello world!<br>Navigate to the next <a href=\"app\">page</a> or just enter #app or #test at the end of the adresse bar of your browser."
-        onLinkActivated: (link)=> item.loadPage(link)
-        
-        MouseArea 
-        {
-            anchors.fill: parent
-            acceptedButtons: Qt.NoButton
-            cursorShape: parent.hoveredLink ? Qt.PointingHandCursor : Qt.ArrowCursor
-        }
-    }
-    
     Label
     {
-        anchors.left: parent.left
-        anchors.top: parent.top
-        anchors.leftMargin: 8
-        anchors.topMargin: 8
-        text: "Label <a href=\"app\">page</a>"
+        anchors.centerIn: parent
+        text: "<b>Hello world!</a><br>Navigate to the next <a href=\"app\">page</a> or just enter #app or #test at the end of the adresse bar of your browser."
         onLinkActivated: (link)=> item.loadPage(link)
+        
         MouseArea 
         {
             anchors.fill: parent
