@@ -11,10 +11,9 @@ Item
         id: seo
     }
 
-    Text 
+    Label
     {
         anchors.centerIn: parent
-        color: "white"
         text: "This qml has been loaded dynamically from a web server and is able to set meta keywords.<br>We area also working on external <a href=\"https://www.crowdware.at\">links</a> and local <a href=\"test\">links</a>."
         onLinkActivated: (link)=> 
         {
