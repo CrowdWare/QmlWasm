@@ -14,6 +14,7 @@ Item
     Text 
     {
         anchors.centerIn: parent
+        color: "white"
         text: "This qml has been loaded dynamically from a web server.<br> Go back <a href=\"main\">home</a>."
         onLinkActivated: (link)=> item.loadPage(link)
         MouseArea 
