@@ -14,9 +14,14 @@ Item
     Text 
     {
         anchors.centerIn: parent
-        textFormat: Text.RichText
-        text: "<style>a:link{color:green}</style>This qml has been loaded dynamically from a web server.<br> Go back <a href=\"main\">home</a>."
+        text: "This qml has been loaded dynamically from a web server.<br> Go back <a href=\"main\">home</a>."
         onLinkActivated: (link)=> item.loadPage(link)
+        MouseArea 
+        {
+            anchors.fill: parent
+            acceptedButtons: Qt.NoButton
+            cursorShape: parent.hoveredLink ? Qt.PointingHandCursor : Qt.ArrowCursor
+        }
     }
 
     Component.onCompleted: 
