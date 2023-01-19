@@ -33,6 +33,13 @@ Item
         anchors.left: parent.left
         anchors.top: parent.top
         text: "Label <a href=\"app\">page</a>"
+        onLinkActivated: (link)=> item.loadPage(link)
+        MouseArea 
+        {
+            anchors.fill: parent
+            acceptedButtons: Qt.NoButton
+            cursorShape: parent.hoveredLink ? Qt.PointingHandCursor : Qt.ArrowCursor
+        }
     }
     
     Button 
