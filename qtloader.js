@@ -285,7 +285,7 @@ function QtLoader(config)
         });
     }
 
-    function loadEmscriptenModule(applicationName) {
+    function loadEmscriptenModule(applicationName, contenUrl) {
 
         // Loading in qtloader.js goes through four steps:
         // 1) Check prerequisites
@@ -323,7 +323,7 @@ function QtLoader(config)
 
         // Wait for all resources ready
         Promise.all([emscriptenModuleSourcePromise, wasmModulePromise]).then(function(){
-            completeLoadEmscriptenModule(applicationName, emscriptenModuleSource, wasmModule);
+            completeLoadEmscriptenModule(applicationName, emscriptenModuleSource, wasmModule, contenUrl);
         }).catch(function(error) {
             handleError(error);
             // An error here is fatal, abort
@@ -331,7 +331,7 @@ function QtLoader(config)
         });
     }
 
-    function completeLoadEmscriptenModule(applicationName, emscriptenModuleSource, wasmModule) {
+    function completeLoadEmscriptenModule(applicationName, emscriptenModuleSource, wasmModule, contenUrl) {
 
         // The wasm binary has been compiled into a module during resource download,
         // and is ready to be instantiated. Define the instantiateWasm callback which
@@ -413,7 +413,13 @@ function QtLoader(config)
 
         self.qtContainerElements = config.canvasElements;
 
-        self.moduleConfig['arguments'] = ["https://raw.githubusercontent.com/CrowdWare/QmlWasm/web/content/",document.location.hash];
+        theme = "1" // Material.Light = 0, Material.Dark = 1, Material.System = 2
+        foreground = "#FFFFFF"
+        background = "#292929"
+        primary = "#9FA8DA"
+        accent = "#F48FB1"
+
+        self.moduleConfig['arguments'] = [contenUrl, document.location.hash, theme, "", "", "", ""];
 
         config.restart = function() {
 

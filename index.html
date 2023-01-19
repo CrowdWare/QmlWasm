@@ -36,7 +36,7 @@
         var spinner = document.querySelector('#qtspinner');
         var canvas = document.querySelector('#qtcanvas');
         var status = document.querySelector('#qtstatus')
-
+        
         qtLoader = QtLoader({
             canvasElements : [canvas],
             showLoader: function(loaderStatus) {
@@ -63,7 +63,7 @@
                 canvas.style.display = 'block';
             },
         });
-        qtLoader.loadEmscriptenModule("appqmlwasm");
+        qtLoader.loadEmscriptenModule("appqmlwasm", "https://raw.githubusercontent.com/CrowdWare/QmlWasm/web/content/");
     }
 
     window.addEventListener('hashchange', () => {
